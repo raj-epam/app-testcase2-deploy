@@ -1,15 +1,16 @@
 # Default values for core-template.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-namespace: redis-dev
+namespace: traefik-dev
 replicaCount: 1
-
+app_name: traefik
 image:
-  repository: redis
+  repository: traefik
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
-
+Labels: 
+   environment: qa
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
